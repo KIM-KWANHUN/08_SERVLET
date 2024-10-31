@@ -3,4 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+    <servlet>
+<!-- comment. xml 방식은 우리가 만든 Servlet 을 등록해야 한다.
+              name 태그 : 사용할 이름 지정
+              class 태그 : 사용할 이름에 해당하는 풀클래스명을 작성한다.
+              load=on-startup 태그 : tomcat start 시 로딩할 순서 -->
+
+        <servlet-name>xmlmapping</servlet-name>
+    <!-- 이름 설정 -->
+        <servlet-class>com.ohgiraffers.lifecycle.xml.LifeCycleTestServlet</servlet-class>
+    <!-- 클래스 풀네임 설정 -->
+        <load-on-startup>3</load-on-startup>
+    <!-- exP 사용자가 해당하는 url을 누를경우 LifeCycleTestServlet 에 있는 메소드가 실행됨 -->
+    </servlet>
+    <!-- comment.
+            servlet-mapping : 우리가 등록한 servlet 을 어떤 url 과 매칭을 시킬 것인지 지정하는 태그이다. -->
+    <servlet-mapping>
+        <servlet-name>xmlmapping</servlet-name>
+    <!-- mapping 할 이름 -->
+        <url-pattern>/xml-lifecycle</url-pattern>
+    <!-- 우리가 만든 url 태그 -->
+    <!-- 만약에 홈페이지가 500개면 500개를 만들어야 되므로 xml 방식은 자주 쓰이지 않음 -->
+    <!--  -->
+    </servlet-mapping>
 </web-app>

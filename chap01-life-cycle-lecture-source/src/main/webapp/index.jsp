@@ -9,5 +9,7 @@
 <hr>
 <a href="xml-lifecycle">xml방식의 서블릿 라이프 사이클 테스트</a>
 <%-- 링크 넣는 태그 (a) --%>
+<hr>
+<a href="annotation-lifecycle">annotation 방식의 서블릿 라이프 사이클 테스트</a>
 </body>
 </html>
