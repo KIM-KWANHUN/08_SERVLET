@@ -27,7 +27,9 @@ public class ServiceMethodServlet extends HttpServlet {
         } else if(("POST".equals(httpMethod))) {
             doPost(request, response);
         }
-
+    /* comment.
+        http 메소드는 get, post, head, options, put, delete
+        등등이 있지만 가장 많이 사용되는 것은 get 과 post 이다. */
     }
 
     @Override
