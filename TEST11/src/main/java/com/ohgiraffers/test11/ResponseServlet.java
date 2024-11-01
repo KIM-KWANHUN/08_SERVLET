@@ -1,4 +1,4 @@
-package com.ohgiraffers.forward;
+package com.ohgiraffers.test11;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,18 +9,14 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/response")
+@WebServlet(value = "/response")
 public class ResponseServlet extends HttpServlet {
-    // 전달받은 기능을 화면에 뿌려주는 메소드
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String userId = (String) req.getAttribute("id");
 
-        String userId = (String) req.getAttribute("id"); // setAttribute 로 받은값 꺼내기
-
-        System.out.println("Request 서블릿에서 전달 받은 ID : " + userId);
-
-        StringBuilder response = new StringBuilder();
-        response.append("<!doctype html>\n")
+        StringBuilder sb = new StringBuilder();
+        sb.append("<!doctype html>\n")
                 .append("<html>\n")
                 .append("<head></head>\n")
                 .append("<body>\n")
@@ -30,10 +26,10 @@ public class ResponseServlet extends HttpServlet {
                 .append("</body>\n")
                 .append("</html>");
 
-        resp.setContentType("text/html;charset=UTF-8"); // 사용할 UTF-8
+        resp.setContentType("text/html;charset=UTF-8");
+
         PrintWriter out = resp.getWriter();
-    // 화면에 뛰울 화면을 프린터라이터로 쓴다.
-        out.print(response.toString());
+        out.print(sb.toString());
 
         out.flush();
         out.close();
