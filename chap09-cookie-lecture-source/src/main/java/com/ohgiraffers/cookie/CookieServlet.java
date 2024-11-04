@@ -34,7 +34,7 @@ public class CookieServlet extends HttpServlet {
         Cookie lastNameCookie = new Cookie("lastName", lastName);
 
         // 2. 만료 시간 설정
-        firstNameCookie.setMaxAge(60*60*24); // 초 단위 설정(하루)
+        firstNameCookie.setMaxAge(60*60*24); // 초 단위 설정(하루) 하루라는 뜻
         lastNameCookie.setMaxAge(60*60*24); // 초 단위 설정(하루)
 
         // 3. 응답 헤더에 쿠키 담기
