@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>JSP</title>
 </head>
 <body>
     <h1>JSP 기본 문법</h1>

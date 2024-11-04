@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Page</title>
 </head>
 <body>
     <h1>Page 지시자 태그</h1>
