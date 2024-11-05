@@ -22,7 +22,7 @@ public class testServlet extends HttpServlet {
         int age = Integer.parseInt(req.getParameter("age"));
         String date = req.getParameter("birth");
         String gender = req.getParameter("gender");
-        
+
 
 
     }

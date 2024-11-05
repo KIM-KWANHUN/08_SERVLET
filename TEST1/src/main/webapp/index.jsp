@@ -17,5 +17,7 @@
     <label for="male">남성</label>
     <input type="radio" name="gender" id="female" value="F">
     <label for="female">여성</label>
+    <button type="submit">제출</button>
+</form>
 </body>
 </html>
