@@ -6,7 +6,8 @@
 <body>
   <%
   %>
-  <form action="calculator" method="post">
+  <h1>초간단 계산기</h1>
+  <form action="/calculator" method="post">
     <label>숫자1 : </label>
     <input type="text" name="number1">
     <br>
@@ -20,7 +21,7 @@
       <option value="/">/</option>
       <option value="%">%</option>
     </select>
-    <button type="submit">결과</button>
+    <button type="submit" name="total">결과</button>
   </form>
 </body>
 </html>

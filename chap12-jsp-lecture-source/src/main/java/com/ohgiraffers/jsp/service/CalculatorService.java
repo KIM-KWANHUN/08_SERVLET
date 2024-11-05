@@ -2,20 +2,27 @@ package com.ohgiraffers.jsp.service;
 
 public class CalculatorService {
 
-    public int calculTotal(int num1, int num2) {
+    public int calculTotal(int num1, int num2, String operator) {
 
-        int operator = 0;
+        int total = 0;
         switch (operator) {
-            case '+' :
-                operator = num1 + num2;
+            case "+" :
+                total = num1 + num2;
                 break;
-            case '-' :
-                operator = num1 - num2;
+            case "-" :
+                total = num1 - num2;
                 break;
-            case '*' :
-                operator = num1 * num2;
+            case "*" :
+                total = num1 * num2;
                 break;
-                case ''
+            case "/" :
+                total = num1 / num2;
+                break;
+            case "%" :
+                total = num1 % num2;
+                break;
+
         }
+        return total;
     }
 }
